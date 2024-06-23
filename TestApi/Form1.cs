@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace TestApi
 {
@@ -37,7 +37,7 @@ namespace TestApi
                 label2.Text = "Resultado: " + producto.nombre_producto + " " + producto.precio;
 
                 richTextBox1.Clear();
-                RichTextBox.AppendText("Nombre: " + producto.nombre_producto + "\n" + "Precio: " + producto.precio);
+                richTextBox1.AppendText("Nombre: " + producto.nombre_producto + "\n" + "Precio: " + producto.precio);
 
                 dataGridView1.Rows.Clear();
                 dataGridView1.Rows.Add(producto.nombre_producto, producto.precio);
